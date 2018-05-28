@@ -1,0 +1,24 @@
+<div class="container padding" >
+  <div class="row">
+      <div class="col-sm-12">
+          <div class="alert alert-light" role="alert">
+              {{listofareas}}
+            </div>
+      </div>
+    </div>
+<div class="row">
+    <div class="col-md-12">
+      <div class="row" [@listanimation] = "results.response.venues.length">
+          <div class="col-sm-2 block-square" *ngFor="let result of results.response.venues">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">{{result.name}}</h5>
+                </div>
+              </div>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

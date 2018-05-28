@@ -1,0 +1,23 @@
+<div class="container padding" >
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="alert alert-light" role="alert">
+                {{title}}
+              </div>
+        </div>
+      </div>
+      <div class="row">
+            <div class="col-sm-12">
+          <div class="row">
+              <div class="col-md-4" *ngFor="let result of results.response.photos.items">
+               <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src={{result.prefix+size+result.suffix}} alt="{{result.source.name }}">
+                <div class="card-body">
+                 <h3>{{result.source.name }}</h3>
+                </div>
+               </div>
+              </div> 
+          </div>
+     </div>
+     </div>
+  </div>
